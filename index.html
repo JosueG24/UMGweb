@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/Reset_styles.css">
+    <title>mI WEB</title>
+</head>
+
+<body>
+    <!-- Zona 1: Encabezado -->
+    <header class="encabezado">
+        <h1>Mi Página Web</h1>
+        <p>Bienvenido a mi sitio</p>
+        <img src="./assets/0_bca8b_759afe3e_orig1.webp" alt="Imagen decorativa" class="imagen-esquina">
+    </header>
+
+    <!-- Zona 2: Sobre esta página -->
+    <section class="seccion-principal">
+        <div class="seccion-contenedor">
+            <h2>Sobre esta página</h2>
+            <p>
+                Esta página fue creada como parte de una práctica de desarrollo web,
+                utilizando HTML, CSS y JavaScript. Su diseño combina una estructura simple
+                con un estilo visual minimalista y elementos que representan algunas de mis cosas favoritas.
+            </p>
+        </div>
+    </section>
+
+    <!-- Zona 3: Intereses -->
+    <main class="contenido">
+        <article class="tarjeta">
+            <h3>Diseño web</h3>
+            <p>Me interesa crear interfaces visuales, ordenadas y funcionales.</p>
+        </article>
+
+        <article class="tarjeta">
+            <h3>Tecnología</h3>
+            <p>Me gusta aprender sobre herramientas digitales y desarrollo web.</p>
+        </article>
+
+        <article class="tarjeta">
+            <h3>Creatividad</h3>
+            <p>Disfruto experimentar con colores, imágenes y estilos visuales.</p>
+        </article>
+        <article class="tarjeta">
+            <h3>Diseño web</h3>
+            <p>Me interesa crear interfaces visuales, ordenadas y funcionales.</p>
+        </article>
+
+        <article class="tarjeta">
+            <h3>Tecnología</h3>
+            <p>Me gusta aprender sobre herramientas digitales y desarrollo web.</p>
+        </article>
+
+        <article class="tarjeta">
+            <h3>Creatividad</h3>
+            <p>Disfruto experimentar con colores, imágenes y estilos visuales.</p>
+        </article>
+    </main>
+
+    <!-- Zona 4: Formulario de contacto -->
+    <section class="seccion-contacto">
+        <div class="contacto-contenedor">
+            <div class="contacto-info">
+                <h2>Contacto</h2>
+                <p>
+                    Puedes enviarme un mensaje completando el siguiente formulario.
+                    Esta sección utiliza HTML, CSS y JavaScript para validar los datos.
+                </p>
+            </div>
+
+            <form class="formulario-contacto" id="formularioContacto">
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje"></textarea>
+                </div>
+
+                <button type="submit" class="boton-enviar">Enviar mensaje</button>
+
+                <p class="mensaje-formulario" id="mensajeFormulario"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Zona 5: Pie de página -->
+    <footer class="pie-pagina">
+        <div class="footer-contenido">
+
+            <div class="footer-texto">
+                <p> 2026 Todos los derechos reservados.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Ten</a>
+                <a href="#">un buen</a>
+                <a href="#">dia</a>
+            </div>
+
+            <img src="./assets/Present.webp" alt="Imagen decorativa" class="imagen-footer">
+
+        </div>
+    </footer>
+
+    <!-- Enlace con el archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,337 @@
+/* -------Zona 1: Encabezado------- */
+.encabezado {
+    height: 100vh;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.imagen-esquina {
+    position: absolute;
+    left: 80px;
+    bottom: 80px;
+
+    width: 250px;
+    height: auto;
+}
+
+.encabezado h1 {
+    font-size: 60px;
+    margin: 0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.encabezado p {
+    font-size: 22px;
+    margin-top: 15px;
+    color: var(--color-secundario );
+}
+
+/* -------Zona 2: Sobre esta página------- */
+
+.seccion-principal {
+    background-color: var(--base-100);
+    color: var(--color-primario);
+
+    padding: 130px 20px 100px;
+}
+
+.seccion-contenedor {
+    max-width: 1050px;
+    min-height: 260px;
+    margin: 0 auto;
+
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 60px 70px;
+
+    border-radius: 24px;
+    border-left: 8px solid var(--c-purple);
+
+    box-shadow: 0 25px 60px rgba(4, 4, 14, 0.16);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.seccion-contenedor h2 {
+    margin: 0 0 25px 0;
+    font-size: 44px;
+    color: var(--color-primario);
+}
+
+.seccion-contenedor p {
+    margin: 0;
+    max-width: 850px;
+
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--neutral);
+}
+
+
+/* -------Zona 3: Intereses------- */
+
+.contenido {
+    padding: 110px 60px 130px;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 45px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    width: 340px;
+    min-height: 280px;
+
+    background: rgba(4, 4, 14, 0.82);
+    color: var(--base-100);
+
+    padding: 45px 38px;
+    border-radius: 28px;
+
+    border: 1px solid rgba(166, 157, 204, 0.45);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 50px rgba(4, 4, 14, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-12px) scale(1.02);
+
+    background: rgba(4, 4, 14, 0.9);
+
+    box-shadow:
+        0 35px 70px rgba(4, 4, 14, 0.48),
+        0 0 30px rgba(166, 157, 204, 0.35);
+
+    border-color: var(--c-purple);
+}
+
+.tarjeta h3 {
+    margin: 0 0 22px 0;
+
+    font-size: 28px;
+    color: var(--c-purple);
+}
+
+.tarjeta p {
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--secondary);
+}
+
+/* -------Zona 4: Formulario de contacto------- */
+
+.seccion-contacto {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(4, 4, 14, 0.08), transparent 22%),
+        radial-gradient(circle at 85% 70%, rgba(166, 157, 204, 0.20), transparent 25%),
+        var(--base-100);
+
+    padding: 120px 60px;
+    color: var(--color-primario);
+}
+
+.contacto-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.contacto-info h2 {
+    font-size: 46px;
+    margin: 0 0 20px 0;
+    color: var(--color-primario);
+}
+
+.contacto-info p {
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--neutral);
+    margin: 0;
+}
+
+.formulario-contacto {
+    background: rgba(4, 4, 14, 0.88);
+    padding: 45px;
+    border-radius: 28px;
+
+    border: 1px solid rgba(166, 157, 204, 0.45);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 55px rgba(4, 4, 14, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+    color: var(--color-secundario);
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 15px 18px;
+
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--base-100);
+
+    border: 1px solid rgba(223, 221, 230, 0.25);
+    border-radius: 14px;
+
+    font-size: 16px;
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+    border-color: var(--c-purple);
+}
+
+.campo-formulario textarea {
+    resize: none;
+}
+
+.boton-enviar {
+    width: 100%;
+    padding: 15px 20px;
+
+    background-color: var(--c-purple);
+    color: var(--color-primario);
+
+    border: none;
+    border-radius: 14px;
+
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.boton-enviar:hover {
+    background-color: var(--secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(166, 157, 204, 0.35);
+}
+
+.mensaje-formulario {
+    margin-top: 18px;
+    font-size: 15px;
+    text-align: center;
+    color: var(--secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .seccion-contacto {
+        padding: 80px 25px;
+    }
+
+    .contacto-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-info {
+        text-align: center;
+    }
+
+    .contacto-info h2 {
+        font-size: 38px;
+    }
+
+    .formulario-contacto {
+        padding: 35px 25px;
+    }
+}
+
+/* -------Zona 5: FOOTER------- */
+
+.pie-pagina {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+
+    padding: 35px 50px;
+    min-height: 15vh;
+
+    display: flex;
+    align-items: center;
+}
+
+.footer-contenido {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-texto h3 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: var(--base-100);
+}
+
+.footer-texto p {
+    margin: 0;
+    color: var(--color-secundario );
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--color-secundario );
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--c-purple);
+    transform: translateY(-3px);
+}
+
+.imagen-footer {
+    width: 170px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.4));
+}
