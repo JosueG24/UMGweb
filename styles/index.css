@@ -234,26 +234,47 @@
 }
 
 
-/* -------Zona 3: Intereses------- */
+/* -------Zona 3: Funcionalidades------- */
 
 .contenido {
-    padding: 110px 60px 130px;
+    padding: 90px 60px 120px;
 
     display: flex;
     justify-content: center;
     align-items: stretch;
-    gap: 45px;
+    gap: 34px;
     flex-wrap: wrap;
 }
 
+/* Encabezado de las cards */
+.contenido-encabezado {
+    flex: 0 0 100%;
+    text-align: center;
+    margin: 0 auto 18px;
+}
+
+.contenido-encabezado h2 {
+    margin: 0 0 14px;
+    font-size: clamp(34px, 5vw, 52px);
+    color: var(--color-primario);
+}
+
+.contenido-encabezado p {
+    margin: 0;
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--neutral);
+}
+
+/* Tarjetas de funciones */
 .tarjeta {
     width: 340px;
-    min-height: 280px;
+    min-height: 255px;
 
     background: rgba(4, 4, 14, 0.82);
     color: var(--base-100);
 
-    padding: 45px 38px;
+    padding: 34px 34px;
     border-radius: 28px;
 
     border: 1px solid rgba(166, 157, 204, 0.45);
@@ -268,6 +289,7 @@
     transition: 0.3s ease;
 }
 
+/* Efecto al pasar el cursor */
 .tarjeta:hover {
     transform: translateY(-12px) scale(1.02);
 
@@ -280,8 +302,22 @@
     border-color: var(--c-purple);
 }
 
+/* Icono de cada tarjeta */
+.tarjeta i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    background: rgba(166, 157, 204, 0.16);
+    color: var(--c-purple);
+    font-size: 24px;
+}
+
 .tarjeta h3 {
-    margin: 0 0 22px 0;
+    margin: 0 0 16px 0;
 
     font-size: 28px;
     color: var(--c-purple);
@@ -295,7 +331,7 @@
     color: var(--secondary);
 }
 
-/* -------Zona 4: Formulario de contacto------- */
+/* -------Zona 4: Formulario de registro------- */
 
 .seccion-contacto {
     background:
@@ -307,6 +343,7 @@
     color: var(--color-primario);
 }
 
+/* Contenedor del formulario */
 .contacto-contenedor {
     max-width: 1100px;
     margin: 0 auto;
@@ -317,12 +354,14 @@
     align-items: center;
 }
 
+/* Título del registro */
 .contacto-info h2 {
     font-size: 46px;
     margin: 0 0 20px 0;
     color: var(--color-primario);
 }
 
+/* Descripción del registro */
 .contacto-info p {
     font-size: 19px;
     line-height: 1.7;
@@ -330,6 +369,7 @@
     margin: 0;
 }
 
+/* Campos del formulario */
 .formulario-contacto {
     background: var(--color-primario);
     padding: 45px;
@@ -431,6 +471,7 @@
     min-height: 22px;
 }
 
+/* Fondo oscuro del modal */
 .modal-login {
     position: fixed;
     inset: 0;
@@ -453,6 +494,7 @@
     pointer-events: auto;
 }
 
+/* Caja principal del modal */
 .modal-contenido {
     width: min(100%, 480px);
     max-height: min(680px, 90vh);
@@ -476,6 +518,7 @@
     transform: translateY(0) scale(1);
 }
 
+/* Contenedor de vistas del modal */
 .modal-vistas {
     width: 100%;
     display: flex;
@@ -483,10 +526,12 @@
     will-change: transform;
 }
 
+/* Desplaza a recuperación */
 .modal-login.recuperando .modal-vistas {
     transform: translateX(-100%);
 }
 
+/* Panel interno del modal */
 .modal-panel {
     width: 100%;
     min-width: 100%;
@@ -514,6 +559,7 @@
     line-height: 1.6;
 }
 
+/* Botón para cerrar modal */
 .modal-cerrar {
     width: 40px;
     height: 40px;
@@ -545,6 +591,7 @@
     outline-offset: 4px;
 }
 
+/* Botones de texto secundarios */
 .boton-texto {
     margin: 16px auto 0;
     color: var(--c-purple);
@@ -740,6 +787,7 @@
     color: var(--color-secundario);
 }
 
+/* Centra la tarjeta del perfil */
 .perfil-contenedor {
     min-height: 100vh;
     padding: 70px 24px;
@@ -747,6 +795,7 @@
     place-items: center;
 }
 
+/* Tarjeta principal del perfil */
 .perfil-tarjeta {
     width: min(100%, 620px);
     padding: 46px;
@@ -772,6 +821,7 @@
     line-height: 1.05;
 }
 
+/* Datos del perfil */
 .perfil-datos {
     display: grid;
     gap: 16px;
@@ -801,6 +851,7 @@
     overflow-wrap: anywhere;
 }
 
+/* Botón para volver */
 .perfil-volver {
     width: fit-content;
     margin-top: 30px;
@@ -817,6 +868,7 @@
     transform: translateY(-3px);
 }
 
+/* Avatar editable */
 .perfil-imagen-boton {
     width: 150px;
     height: 150px;
@@ -839,6 +891,7 @@
     object-fit: cover;
 }
 
+/* Fondo del modal de imagen */
 .modal-imagen-perfil {
     position: fixed;
     inset: 0;
@@ -861,6 +914,7 @@
     pointer-events: auto;
 }
 
+/* Caja del selector de imagen */
 .selector-imagen {
     width: min(100%, 560px);
     position: relative;
@@ -884,6 +938,7 @@
     color: var(--color-secundario);
 }
 
+/* Carrusel del selector */
 .carrusel-perfil {
     display: grid;
     grid-template-columns: 44px 1fr 44px;
@@ -891,16 +946,19 @@
     align-items: center;
 }
 
+/* Ventana visible del carrusel */
 .carrusel-ventana {
     overflow: hidden;
     border-radius: 18px;
 }
 
+/* Pista que se desplaza */
 .carrusel-pista {
     display: flex;
     transition: transform 0.4s ease;
 }
 
+/* Opción de imagen */
 .opcion-imagen {
     min-width: 100%;
     aspect-ratio: 1;
@@ -922,6 +980,7 @@
     object-fit: cover;
 }
 
+/* Flechas del selector */
 .carrusel-control {
     width: 44px;
     height: 44px;
@@ -939,6 +998,7 @@
     background-color: var(--color-secundario);
 }
 
+/* Botón de confirmación */
 .selector-confirmar {
     width: 100%;
     margin-top: 24px;

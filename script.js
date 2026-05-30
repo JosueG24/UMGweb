@@ -12,11 +12,13 @@ const mensajeLogin = document.getElementById("mensajeLogin");
 const mensajeRecuperacion = document.getElementById("mensajeRecuperacion");
 let ultimoBotonLogin = abrirLogin;
 
+// Muestra mensajes debajo de los formularios
 function mostrarMensaje(elemento, texto) {
     elemento.textContent = texto;
     elemento.classList.add("activo");
 }
 
+// Guarda el perfil temporal en el navegador
 function guardarPerfilTemporal(perfilTemporal) {
     perfilTemporal.imagen = perfilTemporal.imagen || "https://placedog.net/500/500?id=1";
 
@@ -27,10 +29,12 @@ function guardarPerfilTemporal(perfilTemporal) {
     }
 }
 
+// Abre la página del perfil
 function abrirPaginaPerfil() {
     window.location.assign(new URL("perfil.html", window.location.href).href);
 }
 
+// Abre el modal de login
 function abrirModalLogin(evento) {
     ultimoBotonLogin = evento.currentTarget;
     modalLogin.classList.add("activo");
@@ -40,6 +44,7 @@ function abrirModalLogin(evento) {
     document.getElementById("nombreLogin").focus();
 }
 
+// Cierra el modal de login
 function cerrarModalLogin() {
     modalLogin.classList.remove("activo");
     modalLogin.classList.remove("recuperando");
@@ -48,16 +53,19 @@ function cerrarModalLogin() {
     ultimoBotonLogin.focus();
 }
 
+// Cambia a recuperación de contraseña
 function mostrarRecuperacion() {
     modalLogin.classList.add("recuperando");
     document.getElementById("emailRecuperacion").focus();
 }
 
+// Vuelve al formulario de login
 function mostrarLogin() {
     modalLogin.classList.remove("recuperando");
     document.getElementById("nombreLogin").focus();
 }
 
+// Registro de nuevo perfil temporal
 formularioRegistro.addEventListener("submit", function (evento) {
     evento.preventDefault();
 
@@ -99,18 +107,21 @@ cerrarLogin.addEventListener("click", cerrarModalLogin);
 abrirRecuperacion.addEventListener("click", mostrarRecuperacion);
 volverLogin.addEventListener("click", mostrarLogin);
 
+// Cierra el modal al hacer clic fuera
 modalLogin.addEventListener("click", function (evento) {
     if (evento.target === modalLogin) {
         cerrarModalLogin();
     }
 });
 
+// Cierra el modal con la tecla Escape
 document.addEventListener("keydown", function (evento) {
     if (evento.key === "Escape" && modalLogin.classList.contains("activo")) {
         cerrarModalLogin();
     }
 });
 
+// Inicio de sesión temporal
 formularioLogin.addEventListener("submit", function (evento) {
     evento.preventDefault();
 
@@ -135,6 +146,7 @@ formularioLogin.addEventListener("submit", function (evento) {
     abrirPaginaPerfil();
 });
 
+// Recuperación de contraseña temporal
 formularioRecuperacion.addEventListener("submit", function (evento) {
     evento.preventDefault();
 

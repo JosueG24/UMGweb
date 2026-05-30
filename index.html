@@ -23,6 +23,7 @@
 <body>
     <!-- Zona 1: Encabezado -->
     <header class="encabezado">
+        <!-- Botón de acceso rápido -->
         <button type="button" class="boton-login-hero boton-brasa" id="abrirLoginHero">
             <i class="fa-solid fa-user" aria-hidden="true"></i>
             Iniciar sesión
@@ -39,8 +40,12 @@
             <span></span>
             <span></span>
         </div>
+
+        <!-- Texto principal del hero -->
         <h1>Mi Página Web</h1>
         <p>Bienvenido a mi sitio</p>
+
+        <!-- Imagen decorativa del hero -->
         <img src="./assets/0_bca8b_759afe3e_orig1.webp" alt="Imagen decorativa" class="imagen-esquina">
     </header>
 
@@ -56,24 +61,35 @@
 
                 <div class="swiper-wrapper">
 
+                    <!-- Slide de introducción -->
+                    <div class="swiper-slide slide-intro">
+                        <h2>Sobre esta página</h2>
+                        <p>
+                            Esta página fue creada como una práctica de desarrollo web con HTML, CSS y JavaScript.
+                            Incluye una galería interactiva, formularios, ventanas modales y un perfil temporal
+                            que puedes personalizar con una imagen de perrito.
+                        </p>
+                    </div>
+
+                    <!-- Slides con imágenes de perros -->
                     <div class="swiper-slide tarjeta-slider">
-                        <img src="https://placedog.net/500/500?id=1" alt="Perro 1">
+                        <img src="https://placedog.net/1200/700?id=11" alt="Perro descansando">
                     </div>
 
                     <div class="swiper-slide tarjeta-slider">
-                        <img src="https://placedog.net/500/500?id=2" alt="Perro 2">
+                        <img src="https://placedog.net/1200/700?id=12" alt="Perro mirando a la cámara">
                     </div>
 
                     <div class="swiper-slide tarjeta-slider">
-                        <img src="https://placedog.net/500/500?id=3" alt="Perro 3">
+                        <img src="https://placedog.net/1200/700?id=13" alt="Perro al aire libre">
                     </div>
 
                     <div class="swiper-slide tarjeta-slider">
-                        <img src="https://placedog.net/500/500?id=4" alt="Perro 4">
+                        <img src="https://placedog.net/1200/700?id=14" alt="Perro relajado">
                     </div>
 
                     <div class="swiper-slide tarjeta-slider">
-                        <img src="https://placedog.net/500/500?id=5" alt="Perro 5">
+                        <img src="https://placedog.net/1200/700?id=15" alt="Perro feliz">
                     </div>
 
                 </div>
@@ -90,41 +106,68 @@
         </section>
     </section>
 
-    <!-- Zona 3: Intereses -->
+    <!-- Zona 3: Funcionalidades -->
     <main class="contenido">
+        <!-- Título de la sección -->
+        <div class="contenido-encabezado">
+            <h2>Funciones del sitio</h2>
+            <p>Estas son algunas acciones que puedes probar dentro de la página.</p>
+        </div>
+
+        <!-- Tarjetas informativas -->
         <article class="tarjeta">
-            <h3>Diseño web</h3>
-            <p>Me interesa crear interfaces visuales, ordenadas y funcionales.</p>
+            <i class="fa-solid fa-images" aria-hidden="true"></i>
+            <h3>Galería principal</h3>
+            <p>El carrusel muestra una introducción y varias imágenes de perritos con navegación por flechas.</p>
         </article>
 
         <article class="tarjeta">
-            <h3>Tecnología</h3>
-            <p>Me gusta aprender sobre herramientas digitales y desarrollo web.</p>
+            <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+            <h3>Registro temporal</h3>
+            <p>El formulario permite crear un perfil básico con nombre, correo y contraseña.</p>
         </article>
 
         <article class="tarjeta">
-            <h3>Creatividad</h3>
-            <p>Disfruto experimentar con colores, imágenes y estilos visuales.</p>
-        </article>
-        <article class="tarjeta">
-            <h3>Diseño web</h3>
-            <p>Me interesa crear interfaces visuales, ordenadas y funcionales.</p>
+            <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i>
+            <h3>Inicio de sesión</h3>
+            <p>El botón abre una ventana modal para entrar con tus datos sin salir de la página.</p>
         </article>
 
         <article class="tarjeta">
-            <h3>Tecnología</h3>
-            <p>Me gusta aprender sobre herramientas digitales y desarrollo web.</p>
+            <i class="fa-solid fa-key" aria-hidden="true"></i>
+            <h3>Recuperación</h3>
+            <p>Desde el modal puedes cambiar a la vista de recuperación usando solo tu correo.</p>
         </article>
 
         <article class="tarjeta">
-            <h3>Creatividad</h3>
-            <p>Disfruto experimentar con colores, imágenes y estilos visuales.</p>
+            <i class="fa-solid fa-id-card" aria-hidden="true"></i>
+            <h3>Perfil guardado</h3>
+            <p>Los datos se guardan de forma temporal para mostrarlos después en la página de perfil.</p>
+        </article>
+
+        <article class="tarjeta">
+            <i class="fa-solid fa-dog" aria-hidden="true"></i>
+            <h3>Imagen de perfil</h3>
+            <p>En el perfil puedes abrir un selector y elegir una foto de perrito como imagen temporal.</p>
+        </article>
+
+        <article class="tarjeta">
+            <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+            <h3>Diseño adaptable</h3>
+            <p>La estructura se acomoda para verse mejor tanto en pantallas grandes como en móviles.</p>
+        </article>
+
+        <article class="tarjeta">
+            <i class="fa-solid fa-fire" aria-hidden="true"></i>
+            <h3>Detalles visuales</h3>
+            <p>Los botones, sombras y efectos de brasas dan movimiento sin complicar la navegación.</p>
         </article>
     </main>
 
     <!-- Zona 4: Formulario de registro -->
     <section class="seccion-contacto">
         <div class="contacto-contenedor">
+            <!-- Texto del formulario -->
             <div class="contacto-info">
                 <h2>Registrarse</h2>
                 <p>
@@ -133,6 +176,7 @@
                 </p>
             </div>
 
+            <!-- Formulario para crear perfil -->
             <form class="formulario-contacto" id="formularioRegistro">
                 <div class="campo-formulario">
                     <label for="nombreRegistro">Nombre</label>
@@ -163,6 +207,7 @@
         </div>
     </section>
 
+    <!-- Modal de inicio de sesión -->
     <div class="modal-login" id="modalLogin" aria-hidden="true">
         <div class="modal-contenido" role="dialog" aria-modal="true" aria-labelledby="tituloLogin">
             <button type="button" class="modal-cerrar" id="cerrarLogin" aria-label="Cerrar inicio de sesión">
@@ -170,6 +215,7 @@
             </button>
 
             <div class="modal-vistas" id="modalVistas">
+                <!-- Vista para iniciar sesión -->
                 <div class="modal-panel">
                     <h2 id="tituloLogin">Iniciar sesión</h2>
                     <p>Ingresa tus datos para continuar con tu perfil temporal.</p>
@@ -198,6 +244,7 @@
                     </form>
                 </div>
 
+                <!-- Vista para recuperar contraseña -->
                 <div class="modal-panel">
                     <h2>Recuperar contraseña</h2>
                     <p>Escribe el email de tu perfil temporal para iniciar el proceso de recuperación.</p>
@@ -228,6 +275,7 @@
             </div>
 
             <div class="footer-links">
+                <!-- Redes sociales -->
                 <a href="#" aria-label="Instagram">
                     <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                     <span class="icono-brasas" aria-hidden="true">

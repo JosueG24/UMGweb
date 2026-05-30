@@ -15,15 +15,18 @@
 </head>
 
 <body class="pagina-perfil">
+    <!-- Contenedor principal del perfil -->
     <main class="perfil-contenedor">
         <section class="perfil-tarjeta">
             <p class="perfil-etiqueta">Perfil temporal</p>
             <h1>Datos del usuario</h1>
 
+            <!-- Imagen editable del perfil -->
             <button type="button" class="perfil-imagen-boton" id="abrirImagenPerfil" aria-label="Cambiar imagen de perfil">
                 <img id="perfilImagen" src="https://placedog.net/500/500?id=1" alt="Imagen de perfil">
             </button>
 
+            <!-- Datos guardados del usuario -->
             <div class="perfil-datos">
                 <div>
                     <span>Nombre</span>
@@ -45,6 +48,7 @@
         </section>
     </main>
 
+    <!-- Modal para elegir imagen -->
     <div class="modal-imagen-perfil" id="modalImagenPerfil" aria-hidden="true">
         <div class="selector-imagen" role="dialog" aria-modal="true" aria-labelledby="tituloImagenPerfil">
             <button type="button" class="modal-cerrar" id="cerrarImagenPerfil" aria-label="Cerrar selector de imagen">x</button>
@@ -55,6 +59,7 @@
             <div class="carrusel-perfil">
                 <button type="button" class="carrusel-control" id="imagenAnterior" aria-label="Imagen anterior">&#8249;</button>
 
+                <!-- Carrusel de fotos disponibles -->
                 <div class="carrusel-ventana">
                     <div class="carrusel-pista" id="carruselImagenes"></div>
                 </div>

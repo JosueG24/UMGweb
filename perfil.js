@@ -23,6 +23,7 @@ let perfilTemporal = {
     imagen: imagenPorDefecto
 };
 
+// Obtiene el perfil guardado
 function obtenerPerfilGuardado() {
     let datosGuardados = null;
 
@@ -39,6 +40,7 @@ function obtenerPerfilGuardado() {
     return datosGuardados ? JSON.parse(datosGuardados) : null;
 }
 
+// Guarda los cambios del perfil
 function guardarPerfil() {
     try {
         localStorage.setItem("perfilTemporal", JSON.stringify(perfilTemporal));
@@ -47,6 +49,7 @@ function guardarPerfil() {
     }
 }
 
+// Muestra los datos en pantalla
 function renderizarPerfil() {
     document.getElementById("perfilNombre").textContent = perfilTemporal.nombre || "Sin registro";
     document.getElementById("perfilEmail").textContent = perfilTemporal.email || "Sin registro";
@@ -54,6 +57,7 @@ function renderizarPerfil() {
     perfilImagen.src = perfilTemporal.imagen || imagenPorDefecto;
 }
 
+// Construye el carrusel de imágenes
 function renderizarCarrusel() {
     carruselImagenes.innerHTML = imagenesPerfil.map((imagen, indice) => `
         <button type="button" class="opcion-imagen ${indice === indiceImagenActual ? "activa" : ""}" data-indice="${indice}" aria-label="Seleccionar perro ${indice + 1}">
@@ -64,6 +68,7 @@ function renderizarCarrusel() {
     carruselImagenes.style.transform = `translateX(-${indiceImagenActual * 100}%)`;
 }
 
+// Abre el selector de imagen
 function abrirModalImagen() {
     const indiceGuardado = imagenesPerfil.indexOf(perfilTemporal.imagen);
     indiceImagenActual = indiceGuardado >= 0 ? indiceGuardado : 0;
@@ -74,6 +79,7 @@ function abrirModalImagen() {
     document.body.style.overflow = "hidden";
 }
 
+// Cierra el selector de imagen
 function cerrarModalImagen() {
     modalImagenPerfil.classList.remove("activo");
     modalImagenPerfil.setAttribute("aria-hidden", "true");
@@ -81,11 +87,13 @@ function cerrarModalImagen() {
     abrirImagenPerfil.focus();
 }
 
+// Cambia la imagen activa
 function moverCarrusel(direccion) {
     indiceImagenActual = (indiceImagenActual + direccion + imagenesPerfil.length) % imagenesPerfil.length;
     renderizarCarrusel();
 }
 
+// Carga datos guardados
 const datosPerfil = obtenerPerfilGuardado();
 
 if (datosPerfil) {
@@ -98,6 +106,7 @@ if (datosPerfil) {
 renderizarPerfil();
 renderizarCarrusel();
 
+// Eventos del selector de imagen
 abrirImagenPerfil.addEventListener("click", abrirModalImagen);
 cerrarImagenPerfil.addEventListener("click", cerrarModalImagen);
 imagenAnterior.addEventListener("click", function () {
@@ -118,6 +127,7 @@ carruselImagenes.addEventListener("click", function (evento) {
     renderizarCarrusel();
 });
 
+// Guarda la imagen seleccionada
 seleccionarImagen.addEventListener("click", function () {
     perfilTemporal.imagen = imagenesPerfil[indiceImagenActual];
     guardarPerfil();
@@ -125,12 +135,14 @@ seleccionarImagen.addEventListener("click", function () {
     cerrarModalImagen();
 });
 
+// Cierra el modal al hacer clic fuera
 modalImagenPerfil.addEventListener("click", function (evento) {
     if (evento.target === modalImagenPerfil) {
         cerrarModalImagen();
     }
 });
 
+// Cierra el modal con la tecla Escape
 document.addEventListener("keydown", function (evento) {
     if (evento.key === "Escape" && modalImagenPerfil.classList.contains("activo")) {
         cerrarModalImagen();
