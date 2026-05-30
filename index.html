@@ -1,17 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fuentes del proyecto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Marcellus&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/Reset_styles.css">
+    <link rel="stylesheet" href="./styles/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Librería del slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>mI WEB</title>
 </head>
 
 <body>
     <!-- Zona 1: Encabezado -->
     <header class="encabezado">
+        <button type="button" class="boton-login-hero boton-brasa" id="abrirLoginHero">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+            Iniciar sesión
+        </button>
+
+        <!-- Brasas decorativas de la fogata -->
+        <div class="brasas" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <h1>Mi Página Web</h1>
         <p>Bienvenido a mi sitio</p>
         <img src="./assets/0_bca8b_759afe3e_orig1.webp" alt="Imagen decorativa" class="imagen-esquina">
@@ -19,14 +46,49 @@
 
     <!-- Zona 2: Sobre esta página -->
     <section class="seccion-principal">
-        <div class="seccion-contenedor">
-            <h2>Sobre esta página</h2>
-            <p>
-                Esta página fue creada como parte de una práctica de desarrollo web,
-                utilizando HTML, CSS y JavaScript. Su diseño combina una estructura simple
-                con un estilo visual minimalista y elementos que representan algunas de mis cosas favoritas.
-            </p>
-        </div>
+        <!-- Slider principal -->
+
+        <section class="slider-seccion">
+
+            <h2 class="slider-titulo">Galería</h2>
+
+            <div class="swiper miSlider">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide slide-intro">
+                        <h2>Sobre esta página</h2>
+                        <p>
+                            Esta página fue creada como parte de una práctica de desarrollo web,
+                            utilizando HTML, CSS y JavaScript. Su diseño combina una estructura simple
+                            con un estilo visual minimalista y elementos que representan algunas de mis cosas favoritas.
+                        </p>
+                    </div>
+
+                    <div class="swiper-slide tarjeta-slider">
+                        <img src="./assets/slide-01.jpg" alt="Ilustración estilo anime con guitarra">
+                    </div>
+
+                    <div class="swiper-slide tarjeta-slider">
+                        <img src="./assets/slide-02.jpg" alt="Ilustración estilo anime con fondo morado">
+                    </div>
+
+                    <div class="swiper-slide tarjeta-slider">
+                        <img src="./assets/slide-03.jpg" alt="Ilustración estilo anime con fondo azul">
+                    </div>
+
+                </div>
+
+                <!-- Flechas -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <!-- Paginación -->
+                <div class="swiper-pagination"></div>
+
+            </div>
+
+        </section>
     </section>
 
     <!-- Zona 3: Intereses -->
@@ -61,39 +123,102 @@
         </article>
     </main>
 
-    <!-- Zona 4: Formulario de contacto -->
+    <!-- Zona 4: Formulario de registro -->
     <section class="seccion-contacto">
         <div class="contacto-contenedor">
             <div class="contacto-info">
-                <h2>Contacto</h2>
+                <h2>Registrarse</h2>
                 <p>
-                    Puedes enviarme un mensaje completando el siguiente formulario.
-                    Esta sección utiliza HTML, CSS y JavaScript para validar los datos.
+                    Crea un perfil temporal con tus datos principales.
+                    Más adelante podrás consultar y personalizar la información de tu perfil en nuevas páginas.
                 </p>
             </div>
 
-            <form class="formulario-contacto" id="formularioContacto">
+            <form class="formulario-contacto" id="formularioRegistro">
                 <div class="campo-formulario">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+                    <label for="nombreRegistro">Nombre</label>
+                    <input type="text" id="nombreRegistro" name="nombre" placeholder="Escribe tu nombre">
                 </div>
 
                 <div class="campo-formulario">
-                    <label for="correo">Correo electrónico</label>
-                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+                    <label for="emailRegistro">Email</label>
+                    <input type="email" id="emailRegistro" name="email" placeholder="ejemplo@correo.com">
                 </div>
 
                 <div class="campo-formulario">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje"></textarea>
+                    <label for="passwordRegistro">Contraseña</label>
+                    <input type="password" id="passwordRegistro" name="password" placeholder="Crea una contraseña">
                 </div>
 
-                <button type="submit" class="boton-enviar">Enviar mensaje</button>
+                <div class="campo-formulario">
+                    <label for="confirmarPassword">Confirmar contraseña</label>
+                    <input type="password" id="confirmarPassword" name="confirmarPassword" placeholder="Repite tu contraseña">
+                </div>
 
-                <p class="mensaje-formulario" id="mensajeFormulario"></p>
+                <button type="submit" class="boton-enviar boton-brasa">Crear perfil</button>
+
+                <button type="button" class="boton-cuenta" id="abrirLogin">Ya tengo una cuenta</button>
+
+                <p class="mensaje-formulario" id="mensajeRegistro"></p>
             </form>
         </div>
     </section>
+
+    <div class="modal-login" id="modalLogin" aria-hidden="true">
+        <div class="modal-contenido" role="dialog" aria-modal="true" aria-labelledby="tituloLogin">
+            <button type="button" class="modal-cerrar" id="cerrarLogin" aria-label="Cerrar inicio de sesión">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+
+            <div class="modal-vistas" id="modalVistas">
+                <div class="modal-panel">
+                    <h2 id="tituloLogin">Iniciar sesión</h2>
+                    <p>Ingresa tus datos para continuar con tu perfil temporal.</p>
+
+                    <form class="formulario-login" id="formularioLogin">
+                        <div class="campo-formulario">
+                            <label for="nombreLogin">Nombre</label>
+                            <input type="text" id="nombreLogin" name="nombre" placeholder="Escribe tu nombre">
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="emailLogin">Email</label>
+                            <input type="email" id="emailLogin" name="email" placeholder="ejemplo@correo.com">
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="passwordLogin">Contraseña</label>
+                            <input type="password" id="passwordLogin" name="password" placeholder="Escribe tu contraseña">
+                        </div>
+
+                        <button type="submit" class="boton-enviar boton-brasa">Entrar</button>
+
+                        <button type="button" class="boton-texto" id="abrirRecuperacion">Olvidé mi contraseña</button>
+
+                        <p class="mensaje-formulario" id="mensajeLogin"></p>
+                    </form>
+                </div>
+
+                <div class="modal-panel">
+                    <h2>Recuperar contraseña</h2>
+                    <p>Escribe el email de tu perfil temporal para iniciar el proceso de recuperación.</p>
+
+                    <form class="formulario-login" id="formularioRecuperacion">
+                        <div class="campo-formulario">
+                            <label for="emailRecuperacion">Email</label>
+                            <input type="email" id="emailRecuperacion" name="email" placeholder="ejemplo@correo.com">
+                        </div>
+
+                        <button type="submit" class="boton-enviar boton-brasa">Recuperar contraseña</button>
+
+                        <button type="button" class="boton-texto" id="volverLogin">Volver a iniciar sesión</button>
+
+                        <p class="mensaje-formulario" id="mensajeRecuperacion"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Zona 5: Pie de página -->
     <footer class="pie-pagina">
@@ -104,9 +229,38 @@
             </div>
 
             <div class="footer-links">
-                <a href="#">Ten</a>
-                <a href="#">un buen</a>
-                <a href="#">dia</a>
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    <span class="icono-brasas" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </a>
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    <span class="icono-brasas" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                    <span class="icono-brasas" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </a>
+                <a href="#" aria-label="GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    <span class="icono-brasas" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </a>
             </div>
 
             <img src="./assets/Present.webp" alt="Imagen decorativa" class="imagen-footer">

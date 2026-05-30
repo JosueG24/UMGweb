@@ -1,0 +1,125 @@
+/* -------Slider------- */
+
+/* Espacio general del slider */
+.slider-seccion {
+    width: 100%;
+    padding: 80px 40px;
+    background-color: var(--base-100);
+
+    overflow: hidden;
+}
+
+.slider-titulo {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 60px;
+
+    color: var(--color-primario);
+}
+
+/* Tamaño principal del carrusel */
+.miSlider {
+    width: 100%;
+    max-width: 1300px;
+    height: min(72vh, 720px);
+    min-height: 460px;
+    margin: 0 auto;
+    border-radius: 28px;
+    background-color: var(--color-primario);
+    box-shadow: 0 25px 60px rgba(4, 4, 14, 0.22);
+}
+
+/* Cada slide ocupa todo el carrusel */
+.slide-intro,
+.tarjeta-slider {
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+/* Slide de presentación */
+.slide-intro {
+    background: rgba(4, 4, 14, 0.82);
+    color: var(--base-100);
+    padding: clamp(34px, 7vw, 86px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide-intro h2 {
+    max-width: 800px;
+    margin: 0 0 24px;
+    font-size: clamp(38px, 7vw, 76px);
+    line-height: 1.05;
+    color: var(--c-purple);
+}
+
+.slide-intro p {
+    max-width: 820px;
+    margin: 0;
+    font-size: clamp(17px, 2vw, 23px);
+    line-height: 1.75;
+    color: var(--color-secundario);
+}
+
+.tarjeta-slider {
+    background-color: var(--color-primario);
+}
+
+/* La imagen llena el slide */
+.tarjeta-slider img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/* Flechas */
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--c-purple);
+}
+
+.swiper-button-next:focus-visible,
+.swiper-button-prev:focus-visible,
+.swiper-pagination-bullet:focus-visible {
+    outline: 2px solid var(--c-purple);
+    outline-offset: 4px;
+}
+
+/* Paginación */
+
+.swiper-pagination-bullet {
+    background: var(--accent);
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--c-purple);
+}
+
+@media (max-width: 768px) {
+    .slider-seccion {
+        padding: 60px 20px;
+    }
+
+    .slider-titulo {
+        font-size: 34px;
+        margin-bottom: 36px;
+    }
+
+    .miSlider {
+        height: 62vh;
+        min-height: 420px;
+        border-radius: 20px;
+    }
+
+    .slide-intro,
+    .tarjeta-slider {
+        border-radius: 20px;
+    }
+}

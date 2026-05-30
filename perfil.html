@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Marcellus&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/Reset_styles.css">
+    <title>Perfil temporal</title>
+</head>
+
+<body class="pagina-perfil">
+    <main class="perfil-contenedor">
+        <section class="perfil-tarjeta">
+            <p class="perfil-etiqueta">Perfil temporal</p>
+            <h1>Datos del usuario</h1>
+
+            <button type="button" class="perfil-imagen-boton" id="abrirImagenPerfil" aria-label="Cambiar imagen de perfil">
+                <img id="perfilImagen" src="https://placedog.net/500/500?id=1" alt="Imagen de perfil">
+            </button>
+
+            <div class="perfil-datos">
+                <div>
+                    <span>Nombre</span>
+                    <strong id="perfilNombre">Sin registro</strong>
+                </div>
+
+                <div>
+                    <span>Email</span>
+                    <strong id="perfilEmail">Sin registro</strong>
+                </div>
+
+                <div>
+                    <span>Contraseña</span>
+                    <strong id="perfilPassword">Sin registro</strong>
+                </div>
+            </div>
+
+            <a class="perfil-volver boton-brasa" href="./index.html">Volver al inicio</a>
+        </section>
+    </main>
+
+    <div class="modal-imagen-perfil" id="modalImagenPerfil" aria-hidden="true">
+        <div class="selector-imagen" role="dialog" aria-modal="true" aria-labelledby="tituloImagenPerfil">
+            <button type="button" class="modal-cerrar" id="cerrarImagenPerfil" aria-label="Cerrar selector de imagen">x</button>
+
+            <h2 id="tituloImagenPerfil">Imagen de perfil</h2>
+            <p>Selecciona una imagen temporal para tu perfil.</p>
+
+            <div class="carrusel-perfil">
+                <button type="button" class="carrusel-control" id="imagenAnterior" aria-label="Imagen anterior">&#8249;</button>
+
+                <div class="carrusel-ventana">
+                    <div class="carrusel-pista" id="carruselImagenes"></div>
+                </div>
+
+                <button type="button" class="carrusel-control" id="imagenSiguiente" aria-label="Imagen siguiente">&#8250;</button>
+            </div>
+
+            <button type="button" class="boton-texto selector-confirmar" id="seleccionarImagen">Usar esta imagen</button>
+        </div>
+    </div>
+
+    <script src="./perfil.js"></script>
+</body>
+
+</html>
